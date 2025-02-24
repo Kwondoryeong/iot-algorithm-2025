@@ -41,4 +41,15 @@ dataAry = [ random.randint(0, 999999) for _ in range(1000000)]
 dataAry.insert(random.randint(0, 1000000), findData)
 sortedAry = sorted(dataAry)
 
-print(f'# 비정렬 배열(100만개) > {dataAry[0:4]} ~~~~ {dataAry[-5:len(dataAry)]}')
+print(f'# 비정렬 배열(100만개) > {dataAry[0:5]} ~~~~ {dataAry[-5:len(dataAry)]}')
+print(f'# 정렬 배열(30만개) > {sortedAry[0:5]} ~~~~ {sortedAry[-5:len(sortedAry)]}')
+
+count = 0
+pos = seqSearch(dataAry, findData)
+if pos != -1:
+    print(f'순차 검색(비정렬 데이터) --> {count}회')
+
+count = 0
+pos = binSearch(sortedAry, findData)
+if pos != -1:
+    print(f'이진 검색(정렬 데이터) --> {count}회')

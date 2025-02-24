@@ -1,4 +1,4 @@
-# da02_search.py
+# da10_search_practice.py
 # 정렬된 데이터의 이진 탐색
 
 from operator import itemgetter
